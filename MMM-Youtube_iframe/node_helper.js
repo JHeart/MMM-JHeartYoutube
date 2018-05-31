@@ -24,7 +24,7 @@ module.exports = NodeHelper.create({
 
         console.log("GET_YoutubeData");
         if(notification === "GET_YOUTUBEDATA"){
-        var apiBase = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=양다일&key=AIzaSyD20q_iIogaWLuH95gmu6TlpA95NKhspEs&maxResults=30&type=video";
+        var apiBase = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=양다일&key="+youtubekey+"&maxResults=30&type=video";
         var url = encodeURI(apiBase);
         this.getYouTubeData(url);
 
