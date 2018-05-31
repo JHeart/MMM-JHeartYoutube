@@ -1,7 +1,8 @@
 
 var NodeHelper = require("node_helper");
 var request = require("request");
-
+var player = null;
+var localid ="" ;
 module.exports = NodeHelper.create({
 
 	start:function () {
@@ -23,12 +24,15 @@ module.exports = NodeHelper.create({
 
         console.log("GET_YoutubeData");
         if(notification === "GET_YOUTUBEDATA"){
-        var apiBase = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=양다일&key="+this.config.youtubeKey+"&maxResults=30&type=video";
+        var apiBase = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=양다일&key=AIzaSyD20q_iIogaWLuH95gmu6TlpA95NKhspEs&maxResults=30&type=video";
         var url = encodeURI(apiBase);
         this.getYouTubeData(url);
 
 
         }
+
+
+
 	},
 
     getYouTubeData: function (url) {
@@ -60,6 +64,10 @@ module.exports = NodeHelper.create({
 
 
     },
+
+
+
+
 
 
 });

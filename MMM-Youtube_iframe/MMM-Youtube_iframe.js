@@ -206,12 +206,13 @@ Module.register("MMM-Youtube_iframe", {
                 }
 
                 if(payload== " close YouTube"){
-                    var id = document.getElementById("youtubediv");
-                    id.style.display = "none";
+                   /* var id = document.getElementById("youtubediv");
+                    id.style.display = "none";*/
+			this.updateDom();
                 }
 
                 if (payload == " first show") {
-                    videoid_global ="C76-2aj3lY8&t=11s";
+                    videoid_global ="C76-2aj3lY8&t=13s";
                    console.log(videoid_global);
                     this.showYoutube();
                 }
@@ -249,7 +250,7 @@ Module.register("MMM-Youtube_iframe", {
             }
 
 
-		}
+	}
 
     },
 
